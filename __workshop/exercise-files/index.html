@@ -5,10 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+  href="https://fonts.googleapis.com/css?family=Jost:400,700&display=swap"
+  rel="stylesheet"
+/>
 
     <title>Signup Form</title>
   </head>
   <body>
+    <div class="wrapper">
+      <form class="signupForm">
+        <h1>Signup Form</h1>
+
+        <div class="lineitems">
+          <label for="name">Full Name: </label>
+          <input id=""  type="text" >
+        </div>
+        <div class="lineitems">
+          <label for="address">Street Address: </label>
+          <input id=""  type="text" >
+        </div>
+        <div class="lineitems">
+          <label class="inputs" for="email">Email Address </label>
+          <input id=""  type="email" >
+        </div>
+        <div class="lineitems">
+          <label for="number">Phone number </label>
+          <input id=""  type="phone" >
+        </div>
+        <div class="lineitems">
+          <label for="password">Password: </label>
+          <input id="firstPass"  type="password" value="" >
+        </div>
+        <div class="lineitems">
+          <label for="confirmPassword">Confirm Password: </label>
+          <input id="secondPass"  type="password" value="" onkeyup="checkPass(); return false;" >
+        </div>
+        <div class="pageandterms">
+          <input id="termbox" type="checkbox">
+          <label >I agree to the <a href="/">terms of service</a> </label>
+        </div>
+        <div id="errormessage"><P>Your Password is too short. Please provide a password thats atleast 10 characters long!</P></div>
+        <footer>
+          <button id="clearbutton" type="clear" value="clear">Clear</button>
+          <button id="submitbutton" type="submit" value="submit">Submit</button>
+
+        </footer>
+        
+
+
+      </form>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

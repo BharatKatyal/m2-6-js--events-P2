@@ -18,11 +18,22 @@ const people = [
 // an argument and returns an array of their full names (each full name is a string).
 
 function fullName(peopleArr) {
-  // return something
+  
+  let fullNameArray = peopleArr.map(function(element, index){
+    let fullName = ""
+    let firstName = people[index].name.first +" "
+    let middleName = people[index].name.middle
+    middleName = middleName ? middleName + " ":""
+
+    let lastName = people[index].name.last 
+    fullName = firstName + middleName + lastName
+    return fullName
+  })
+  return fullNameArray
 }
 
 // 2. Do a console.log to verify your function.
-
+console.log(fullName(people))
 // 3. Run the test to validate: yarn test exercise-3
 
 module.exports = { fullName, people };

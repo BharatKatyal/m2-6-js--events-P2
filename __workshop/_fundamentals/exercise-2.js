@@ -20,10 +20,20 @@ const people = [
 // Use Math.round()
 
 function avgAge(peopleArr) {
+  let sumOfAges = 0
   // return something
-}
+  people.forEach(function(person, index){
+    let realAge = people[index].age
+    sumOfAges=sumOfAges + realAge;
+    // console.log(realAge) 
+  })
 
+  let avg= sumOfAges/people.length
+  return Math.round(avg)
+
+}
 // 2. Do a console.log to verify your function.
+console.log(avgAge(people))
 
 // 3. Run the test to validate: yarn test exercise-2
 
